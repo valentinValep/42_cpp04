@@ -14,7 +14,7 @@ public:
 	AMateria(); // Default constructor
 	AMateria(const AMateria &src); // Copy constructor
 	AMateria(std::string const &type);
-	~AMateria(); // Destructor
+	virtual ~AMateria(); // Destructor
 	AMateria	&operator=(const AMateria &src); // Assignment operator
 
 	std::string const	&getType() const;

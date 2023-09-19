@@ -9,6 +9,7 @@ OBJ :=	main.o \
 		Ice.o \
 		Cure.o \
 		Character.o \
+		MateriaSource.o
 
 INCLUDES := -I.
 

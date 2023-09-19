@@ -30,8 +30,14 @@ Character	&Character::operator=(const Character &src)
 		return (*this);
 	this->_name = src._name;
 	for (int i = 0; i < 4; i++)
+	{
+		if (this->_inventory[i] != NULL)
+			delete this->_inventory[i];
 		if (src._inventory[i] != NULL)
 			this->_inventory[i] = src._inventory[i]->clone();
+		else
+			this->_inventory[i] = NULL;
+	}
 	return (*this);
 }
 
